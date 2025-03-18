@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin User",
+      "email": "admin@rubikamp.com",
+      "password": "admin123",
+      "isAdmin": true
+    }
+  ]
+}
