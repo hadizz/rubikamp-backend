@@ -59,6 +59,26 @@ class User {
     await this.writeUsersFile(data);
     return user;
   }
+
+  static async delete(id) {
+    const data = await this.readUsersFile();
+    data.users = data.users.filter(user => user.id !== id);
+    await this.writeUsersFile(data);
+  }
+
+  static async update(id, { name, email, password, isAdmin }) {
+    const data = await this.readUsersFile();
+    const user = data.users.find(user => user.id === id);
+    if (!user) {
+      throw new Error('User not found');
+    }
+    user.name = name || user.name;
+    user.email = email || user.email;
+    user.password = password || user.password;
+    user.isAdmin = isAdmin !== undefined ? isAdmin : user.isAdmin;
+    await this.writeUsersFile(data);
+    return user;
+  }
 }
 
 module.exports = User; 
