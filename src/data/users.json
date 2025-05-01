@@ -1,18 +1,11 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Admin User",
+      "id": "1743950462874",
+      "name": "admin",
       "email": "admin@rubikamp.com",
       "password": "admin123",
-      "isAdmin": true
-    },
-    {
-      "id": "1743950462874",
-      "name": "hadi",
-      "email": "hadi@test.com",
-      "password": "123456",
-      "isAdmin": false,
+      "isAdmin": true,
       "createdAt": "2025-04-06T14:41:02.874Z"
     }
   ]

@@ -1,12 +1,14 @@
 # Rubikamp Backend
 
-A simple authentication backend service providing user registration, login, and user management functionality.
+A simple backend service providing user authentication, user management, and product management functionality.
 
 ## Features
 
 - User authentication (signup and login)
 - JWT-based authentication
 - Admin-only routes for user management
+- Product management (CRUD operations)
+- API documentation with Swagger
 - Error handling middleware
 
 ## Prerequisites
@@ -39,13 +41,39 @@ A simple authentication backend service providing user registration, login, and 
 ### Development
 
 Start the development server with hot reload:
-
 ```
 npm run dev
 ```
 
 Server is now running on http://localhost:8000
 
-You can use Postman for testing endpoints.
+### API Documentation
+
+The API documentation is available at http://localhost:8000/docs when the server is running.
+
+### Available Endpoints
+
+#### Authentication
+- POST `/api/auth/signup` - Register a new user
+- POST `/api/auth/login` - Login a user
+
+#### Users (Admin only)
+- GET `/api/users` - Get all users
+- GET `/api/users/:id` - Get a specific user
+- POST `/api/users` - Create a new user
+- PUT `/api/users/:id` - Update a user
+- DELETE `/api/users/:id` - Delete a user
+
+#### Products
+- GET `/api/products` - Get all products
+- GET `/api/products/:id` - Get a specific product
+- GET `/api/products/category/:category` - Get products by category
+- POST `/api/products` - Create a new product (Admin only)
+- PUT `/api/products/:id` - Update a product (Admin only)
+- DELETE `/api/products/:id` - Delete a product (Admin only)
+
+### Testing
+
+You can use Postman or the Swagger UI at `/api-docs` for testing endpoints.
 
 Have fun! :)
