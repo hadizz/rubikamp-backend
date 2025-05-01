@@ -74,6 +74,6 @@ The API documentation is available at http://localhost:8000/docs when the server
 
 ### Testing
 
-You can use Postman or the Swagger UI at `/api-docs` for testing endpoints.
+You can use Postman or the Swagger UI at `/docs` for testing endpoints.
 
 Have fun! :)
